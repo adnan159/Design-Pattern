@@ -74,11 +74,11 @@ class HomeStatus {
 }
 
 
-$locaks = new Locks;
+$locks = new Locks;
 $light = new Light;
 $alarm = new Alarm;
 
-$locaks->succedWith($light);
+$locks->succedWith($light);
 $light->succedWith($alarm);
 
-$locaks->check(new HomeStatus);
+$locks->check(new HomeStatus);
